@@ -63,7 +63,7 @@ function App() {
         <div className="hero-copy">
           <div className="kicker"><span className="live"></span> STUDIO / LABEL / VISUALS <span className="kicker-place">06°02'23.0"N 80°14'02.5"E</span></div>
           <h1>MAKE<br/>NOISE<span className="period">.</span><br/><span className="outline-word">MAKE</span><br/><span className="lime-word">WAVES.</span></h1>
-          <div className="hero-bottom"><p>Independent music production from Galle, Sri Lanka. Built for artists with something to say.</p><a className="round-link" href="#releases" aria-label="Explore releases"><span>EXPLORE<br/>THE SOUND</span><b>↓</b></a></div>
+          <div className="hero-bottom"><p>Independent music production from Galle, Sri Lanka. Built for artists with something to say.</p><a className="round-link" href="#releases" aria-label="Explore releases"><span>EXPLORE<br/>THE SOUND</span><b>+</b></a></div>
         </div>
         <div className="hero-photo" role="img" aria-label="SILENT music video artwork">
           <img src="https://i.ytimg.com/vi/yOHy7LDLUjQ/maxresdefault.jpg" alt="SILENT music video by Avatar Shark and Dinesh Hemantha" fetchPriority="high"/>
