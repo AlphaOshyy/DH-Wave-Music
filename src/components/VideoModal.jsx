@@ -1,0 +1,5 @@
+import React from 'react';
+export default function VideoModal({ track, onClose }) {
+  if (!track) return null;
+  return <div className="video-modal" role="dialog" aria-modal="true" aria-label={track.title + ' music video'} onClick={onClose}><button className="modal-close" onClick={onClose} aria-label="Close video">CLOSE ×</button><div className="video-box" onClick={event => event.stopPropagation()}><iframe src={'https://www.youtube-nocookie.com/embed/' + track.id + '?autoplay=1&rel=0&playsinline=1'} title={track.title + ' music video'} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" loading="lazy" allowFullScreen /></div><div className="modal-caption"><span>{track.note}</span><strong>{track.title}</strong><small>{track.artists}</small></div></div>;
+}
