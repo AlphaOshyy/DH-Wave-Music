@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// Add owner-approved files at public/audio/raw-demo.mp3 and public/audio/mastered-demo.mp3.
+// When the studio supplies audio, set each src to import.meta.env.BASE_URL + 'audio/raw-demo.mp3' or 'audio/mastered-demo.mp3'.
 const samples = { raw: { label: 'RAW TAKE', src: '' }, mastered: { label: 'MASTERED', src: '' } };
 export default function RawMastered() {
   const [mode, setMode] = useState('raw'); const [playing, setPlaying] = useState(false); const current = samples[mode];
