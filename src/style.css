@@ -86,3 +86,50 @@ h1,h2,h3,.wordmark,.footer-logo{font-family:"Archivo Black","Noto Sans Sinhala",
 /* Leave enough scroll room for the persistent player at the end of the page. */
 .footer{padding-bottom:170px}
 @media(max-width:640px){.footer{padding-bottom:150px}}
+
+
+/* Accessibility pass: stronger text contrast and readable label weights */
+.kicker,.section-no,.proof-label,.proof-stat small,.studio-status small,
+.photo-caption small,.hero-foot,.manifesto-side,.manifesto-main p,
+.studio .section-top>p,.service-row p,.audio-dock-label,.audio-dock-empty span,
+.audio-dock-track span,.audio-dock-note,.wizard-privacy,.wizard-option span,
+.wizard-step label,.ab-copy>p,.ab-current small,.ab-index,.ab-art-top,
+.ab-art-bottom,.ab-disclaimer,.footer-main p,.footer-bottom {
+  color:#c2c3b8;
+  font-weight:500;
+}
+.kicker,.section-no,.form-title,.wizard-kicker,.wizard-step label,
+.ab-art-top,.ab-art-bottom,.ab-index,.audio-dock-label,.audio-dock-note,
+.hero-foot,.proof-stat small,.footer-bottom,.footer-social {
+  font-weight:600;
+}
+.section-no,.kicker { color:#d0d1c7; letter-spacing:.09em; }
+.kicker-place { color:#bfc0b5; }
+.hero-bottom p,.section-top>p,.release-meta p,.producer-copy p,
+.address-row small,.form-foot { font-weight:500; }
+.nav-links { color:#e0ded3; font-weight:500; }
+.proof-stat small { color:#c1c2b7; }
+.photo-caption small,.photo-caption span { font-weight:600; }
+.releases .section-top .section-no,
+.contact .section-top .section-no { color:#42443a; font-weight:700; }
+.releases .section-top>p,.contact .section-top>p { color:#44463d; font-weight:500; }
+.release-meta>div>span,.release-meta p,.releases-end { color:#4e5046; font-weight:500; }
+.text-play { font-weight:600; }
+.contact .address-row span,.contact .contact-row span,
+.contact .form-foot,.contact .booking-form label { color:#4a4c42; font-weight:600; }
+.contact .address-row small { color:#55574d; }
+.booking-form input::placeholder,.booking-form textarea::placeholder { color:#5b5d52; opacity:1; }
+.producer-copy .section-no,.producer-sign span { color:#424630; font-weight:600; }
+.footer-main p,.footer-bottom { color:#b0b1a6; }
+.footer-bottom a { color:#e0dfd4; font-weight:600; }
+.studio-status,.header-book,.form-title,.wizard-step label { font-weight:600; }
+.wizard-option span,.wizard-privacy,.audio-dock-track span { color:#c1c2b7; }
+.ab-current small,.ab-index,.ab-art-top,.ab-art-bottom,.ab-disclaimer { color:#c1c2b7; }
+@media (prefers-contrast: more) {
+  :root { --muted:#d7d8ce; --line:#66685b; }
+  .releases .section-top .section-no,.contact .section-top .section-no,
+  .releases .section-top>p,.contact .section-top>p,
+  .release-meta>div>span,.release-meta p,.releases-end,
+  .contact .address-row span,.contact .contact-row span,
+  .contact .form-foot,.contact .booking-form label { color:#292a23; }
+}
