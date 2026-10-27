@@ -133,3 +133,42 @@ h1,h2,h3,.wordmark,.footer-logo{font-family:"Archivo Black","Noto Sans Sinhala",
   .contact .address-row span,.contact .contact-row span,
   .contact .form-foot,.contact .booking-form label { color:#292a23; }
 }
+
+
+/* SITE-WIDE READABILITY OVERRIDE: ensure all secondary copy is readable */
+:root { --muted:#c8c9bf; --line:#515348; }
+.kicker,.section-no,.proof-label,.proof-stat small,.hero-foot,
+.photo-caption small,.kicker-place,.manifesto-side,.manifesto-main p,
+.studio .section-top>p,.service-row p,.footer-main p,.footer-bottom,
+.studio-status small,.audio-dock-label,.audio-dock-empty span,
+.audio-dock-track span,.audio-dock-note,.wizard-privacy,.wizard-option span,
+.wizard-step label,.ab-copy>p,.ab-current small,.ab-index,
+.ab-art-top,.ab-art-bottom,.ab-disclaimer {
+  color:#d0d1c7 !important;
+  opacity:1 !important;
+}
+.header .nav-links { color:#f0eee4 !important; }
+.hero-bottom p { color:#d1d2c8 !important; }
+.proof-stat small { color:#c8c9bf !important; }
+.studio-status small { color:#c8c9bf !important; }
+.releases .section-top .section-no,
+.contact .section-top .section-no { color:#34362d !important; }
+.releases .section-top>p,.contact .section-top>p { color:#42443a !important; }
+.release-meta>div>span,.release-meta p,.releases-end { color:#44463d !important; }
+.text-play { color:#202119 !important; }
+.contact .address-row span,.contact .contact-row span,
+.contact .form-foot,.contact .booking-form label { color:#3c3e34 !important; }
+.contact .address-row small { color:#4b4d43 !important; }
+.booking-form input::placeholder,.booking-form textarea::placeholder {
+  color:#4c4e44 !important; opacity:1 !important;
+}
+.producer-copy .section-no,.producer-sign span { color:#35382a !important; }
+.footer-main p,.footer-bottom { color:#c4c5ba !important; }
+.footer-bottom a { color:#f0eee4 !important; }
+.wizard-option span,.wizard-privacy,.audio-dock-track span { color:#c8c9bf !important; }
+.ab-current small,.ab-index,.ab-art-top,.ab-art-bottom,.ab-disclaimer { color:#c8c9bf !important; }
+.form-foot { color:#4c4e44 !important; }
+@media(max-width:760px) {
+  .hero-foot,.proof-label,.proof-stat small,.kicker-place,
+  .studio-status small,.audio-dock-note,.wizard-privacy { opacity:1 !important; }
+}
