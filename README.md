@@ -1,22 +1,30 @@
-# DH Wave Music Website
+# DH Wave Music
 
-A responsive single-page website for DH Wave Music in Galle, Sri Lanka.
+React + Vite website for DH Wave Music, Galle, Sri Lanka.
 
-## Publish with GitHub Pages
+## Local development
 
-1. Open the repository Settings.
-2. Select Pages.
-3. Under Build and deployment, choose Deploy from a branch.
-4. Select the `main` branch and `/ (root)` folder, then Save.
-5. Wait for GitHub Pages to publish the site.
+```bash
+npm install
+npm run dev
+```
 
-The site uses plain HTML, CSS and JavaScript. No build step is required.
+## Build
 
-## Before launch
+```bash
+npm run build
+```
 
-- Confirm the official Facebook and TikTok profile URLs, then replace the placeholder social links in `index.html`.
-- Confirm current subscriber counts, ratings and release statistics before public launch.
-- Replace the typographic release artwork with approved official cover art when available.
-- Confirm the studio has permission to display all artist names and releases.
+## GitHub Pages
 
-Booking requests open WhatsApp with a prefilled message. The website does not store submitted form data.
+The workflow in `.github/workflows/deploy.yml` builds the Vite site and deploys the `dist` directory on every push to `main`. In repository Settings > Pages, set the source to **GitHub Actions**.
+
+## Before client launch
+
+- Confirm each linked music video and official thumbnail with the label.
+- Confirm current public stats and any rating claims.
+- Replace the producer image with an approved portrait when supplied.
+- Verify all social account URLs with the studio owner.
+- Get approval to use artist names, artwork and video embeds.
+
+The booking form opens a prefilled WhatsApp message and does not store form data.
