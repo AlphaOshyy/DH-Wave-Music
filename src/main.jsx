@@ -22,6 +22,7 @@ function App() {
   const [menu, setMenu] = useState(false);
   const [activeTrack, setActiveTrack] = useState(null);
   useEffect(() => {
+    document.getElementById('boot-fallback')?.remove();
     const nodes = document.querySelectorAll('.enter');
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('shown'); observer.unobserve(entry.target); }
