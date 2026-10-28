@@ -22,10 +22,22 @@ function App() {
   const [menu, setMenu] = useState(false);
   const [activeTrack, setActiveTrack] = useState(null);
   useEffect(() => {
+    // Keep the branded HTML fallback visible until React has mounted.
     document.getElementById('boot-fallback')?.remove();
+
     const nodes = document.querySelectorAll('.enter');
+    // Older Safari/webviews may not implement IntersectionObserver. Never leave
+    // content permanently transparent in that case.
+    if (!('IntersectionObserver' in window)) {
+      nodes.forEach(node => node.classList.add('shown'));
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('shown'); observer.unobserve(entry.target); }
+      if (entry.isIntersecting) {
+        entry.target.classList.add('shown');
+        observer.unobserve(entry.target);
+      }
     }), { threshold: 0.12 });
     nodes.forEach(node => observer.observe(node));
     return () => observer.disconnect();
