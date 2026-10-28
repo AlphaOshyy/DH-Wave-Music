@@ -22,9 +22,6 @@ function App() {
   const [menu, setMenu] = useState(false);
   const [activeTrack, setActiveTrack] = useState(null);
   useEffect(() => {
-    // Keep the branded HTML fallback visible until React has mounted.
-    document.getElementById('boot-fallback')?.remove();
-
     const nodes = document.querySelectorAll('.enter');
     // Older Safari/webviews may not implement IntersectionObserver. Never leave
     // content permanently transparent in that case.
