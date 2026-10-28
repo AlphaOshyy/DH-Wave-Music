@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export default function AudioDock({ tracks }) {
   const [selected, setSelected] = useState(null);
-  const [minimized, setMinimized] = useState(false);
+  const [minimized, setMinimized] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches);
   const startTrack = track => { setSelected(track); setMinimized(false); };
   const embedUrl = selected ? 'https://www.youtube-nocookie.com/embed/' + selected.id + '?autoplay=1&controls=1&rel=0&playsinline=1' : '';
   return <aside className={'audio-dock ' + (minimized ? 'is-minimized' : '')} aria-label="Persistent studio player">
